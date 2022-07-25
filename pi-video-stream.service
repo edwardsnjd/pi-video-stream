@@ -1,0 +1,11 @@
+[Unit]
+Description=SystemD service to keep the pi-video-stream server running
+After=network.target
+[Service]
+WorkingDirectory=/home/pi/projects/pi-video-stream
+ExecStart=/home/pi/projects/pi-video-stream/run
+Restart=always
+RestartSec=10
+User=pi
+[Install]
+WantedBy=multi-user.target
